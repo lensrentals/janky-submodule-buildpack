@@ -7,4 +7,4 @@ indent() {
 echo "-----> Found a .gitmodules-hack"
 
 echo "Moving .gitmodules-hack to .gitmodules" | indent
-mv .gitmodules-hack .gitmodules
+mv $1/.gitmodules-hack $1/.gitmodules
