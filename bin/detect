@@ -1,8 +1,10 @@
 #!/bin/sh
 
-if [ -f $1/.gitmodules-hack ]; then
-  echo "JankyGitSubmoduleFramwork"
-  exit 0
-else
-  exit 1
+app_dir="$1"
+
+if [ ! -f "$app_dir/.gitmodules-hack" ]; then
+    exit 1
 fi
+
+echo "Janky git submodules"
+exit 0
